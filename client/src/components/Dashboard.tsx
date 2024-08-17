@@ -3,7 +3,7 @@ import axios from "axios";
 import Chart from "./Chart";
 import Table from "./Table";
 
-const BASE_API_URL = import.meta.env.VITE_BASE_URL;
+const BASE_API_URL = "http://localhost:4000/api";
 
 interface ChartData {
   labels: string[];
@@ -61,7 +61,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="flex justify-center p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-screen-xl w-full items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-xl w-full items-center">
         {components.map((config, index) => {
           switch (config.type) {
             case "chart":

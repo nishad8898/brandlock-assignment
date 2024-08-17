@@ -55,7 +55,7 @@ interface TableProps {
 const TableComponent: React.FC<TableProps> = ({ data, layout }) => {
   return (
     <div
-      className="rounded shadow-2xl overflow-y-auto bg-slate-700"
+      className="rounded shadow-2xl overflow-y-auto bg-slate-700 justify-self-center"
       style={{ width: layout.width, height: layout.height }}
     >
       <table className="min-w-full divide-y divide-gray-200">

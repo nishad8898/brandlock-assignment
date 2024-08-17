@@ -3,7 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = 4000;
 
 app.use(cors());
 
@@ -29,6 +29,29 @@ const componentsConfig = [
     ],
     layout: {
       width: "80%",
+      height: "300px",
+    },
+  },
+  {
+    type: "table",
+    data: [
+      ["Product", "Price", "Quantity"],
+      ["Widget A", 100, 200],
+      ["Widget B", 200, 200],
+    ],
+    layout: {
+      width: "80%",
+      height: "300px",
+    },
+  },
+  {
+    type: "chart",
+    data: {
+      labels: ["Jan", "Feb", "Mar"],
+      values: [10, 25, 15],
+    },
+    layout: {
+      width: "50%",
       height: "300px",
     },
   },
